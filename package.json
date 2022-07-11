@@ -1,0 +1,15 @@
+{
+  "name": "jasperalexander.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JasperAlexander/jasperalexander.github.io.git",
+  "author": "Jasper Alexander <84851956+JasperAlexander@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
