@@ -1,0 +1,17 @@
+backend:
+  name: github
+  branch: main
+  repo: JasperAlexander/jasperalexander.github.io
+  base_url: https://mysterious-castle-89778.herokuapp.com
+media_folder: '../images'
+publish_mode: editorial_workflow
+collections:
+  - name: 'info' # Used in routes, e.g., /admin/collections/blog
+    label: 'Info' # Used in the UI
+    folder: 'info' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
