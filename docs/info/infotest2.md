@@ -1,3 +1,8 @@
+---
+title: 'infotest2'
+description: 'Infotest2 description'
+---
+
 # Infotest2
 
 ## Lorum
