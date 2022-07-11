@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: master
+  branch: main
   repo: JasperAlexander/jasperalexander.github.io
   base_url: https://mysterious-castle-89778.herokuapp.com
 media_folder: '../images'
