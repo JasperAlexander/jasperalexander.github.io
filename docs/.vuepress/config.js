@@ -1,9 +1,6 @@
 module.exports = {
     title: 'Website title',
     description: 'Website desription',
-    repo: 'JasperAlexander/jasperalexander.github.io',
-    branch: 'master',
-    base_url: 'https://mysterious-castle-89778.herokuapp.com',
     themeConfig: {
         smoothScroll: true,
         nav: [

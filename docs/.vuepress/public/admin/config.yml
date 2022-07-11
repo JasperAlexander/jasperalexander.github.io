@@ -1,3 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
+  repo: JasperAlexander/jasperalexander.github.io
+  base_url: https://mysterious-castle-89778.herokuapp.com
+media_folder: '../images'
