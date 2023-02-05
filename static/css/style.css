@@ -206,19 +206,19 @@ a {
     color: inherit;
 }
 
-.post a {
-    text-decoration: underline;
-}
-
-.post a {
+.post a,
+.portfolio a {
+    text-decoration-line: underline;
     text-decoration-color: var(--underline);
 }
 
-.post a:hover {
+.post a:hover,
+.portfolio a:hover {
     text-decoration-color: var(--underline-hover)
 }
 
-.post a:focus {
+.post a:focus,
+.portfolio a:focus {
     text-decoration-line: none;
     outline-width: 2px;
     outline-style: solid;
@@ -401,6 +401,8 @@ aside ul a {
 
 .list .item .subtitle {
     color: var(--subtitle);
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .dark-theme .list .item:hover .subtitle,

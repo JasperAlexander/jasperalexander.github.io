@@ -4,6 +4,6 @@ title: 'Portfolio'
 
 Portfolio
 
-Projects that I've worked on.
+Projects of myself that I've worked on. You can find my contributions on [GitHub](https://github.com/JasperAlexander).
 
 &nbsp;

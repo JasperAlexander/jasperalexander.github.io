@@ -2,6 +2,7 @@
     {{ .Title | title }}
 {{ end }}
 {{ define "main" }}
+    <div class="portfolio">
     {{ .Content }}
     {{ if gt (len (where (where .Site.RegularPages "Type" "portfolio") "File.Dir" "portfolio/")) 0 }}
         <ul class="list">
@@ -10,7 +11,7 @@
                     <a href="{{ if .Params.link }}{{ .Params.link }}{{ else }}{{ .RelPermalink }}{{ end }}" target="{{ if .Params.link }}_blank{{ end }}" class="item">
                         <span class="title">{{ .Title }}</span>
                         <span class="subtitle">{{ .Params.subtitle }}</span>
-                        <time>{{ .Date.Format "02 January 2006" }}</time>
+                        <time>{{ .Date.Format "2006" }}</time>
                     </a>
                 </li>
             {{ end }}
@@ -18,4 +19,5 @@
     {{ else }}
         <p>{{ i18n "noProjects" }}</p>
     {{ end }}
+    </div>
 {{ end }}
