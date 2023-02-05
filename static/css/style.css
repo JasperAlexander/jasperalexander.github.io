@@ -206,19 +206,16 @@ a {
     color: inherit;
 }
 
-.post a,
-.portfolio a {
+.post a {
     text-decoration-line: underline;
     text-decoration-color: var(--underline);
 }
 
-.post a:hover,
-.portfolio a:hover {
+.post a:hover {
     text-decoration-color: var(--underline-hover)
 }
 
-.post a:focus,
-.portfolio a:focus {
+.post a:focus {
     text-decoration-line: none;
     outline-width: 2px;
     outline-style: solid;
