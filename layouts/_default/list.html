@@ -1,0 +1,21 @@
+{{ define "title" }}
+    {{ .Title | title }}
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+    {{ if gt (len (where (where .Site.RegularPages "Type" "posts") "File.Dir" "posts/")) 0 }}
+        <h1 style="margin-top: 80px;">{{ i18n "posts" }}</h1>
+        <ul class="list">
+            {{ range first 10 (where (where .Site.RegularPages "Type" "posts") "File.Dir" "posts/") }}
+                <li>
+                    <a href="{{ .RelPermalink }}" class="item">
+                        <span class="title">{{ .Title }}</span>
+                        <span class="subtitle">{{ .Params.subtitle }}</span>
+                        <time>{{ .Date.Format "02 January 2006" }}</time>
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    {{ end }}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ define "title" }}
+    {{ .Title | title }}
+{{ end }}
+{{ define "main" }}
+    {{ .Content }}
+    {{ if gt (len (where (where .Site.RegularPages "Type" "portfolio") "File.Dir" "portfolio/")) 0 }}
+        <ul class="list">
+            {{ range first 10 .Pages.ByDate.Reverse }}
+                <li>
+                    <a href="{{ if .Params.link }}{{ .Params.link }}{{ else }}{{ .RelPermalink }}{{ end }}" target="{{ if .Params.link }}_blank{{ end }}" class="item">
+                        <span class="title">{{ .Title }}</span>
+                        <span class="subtitle">{{ .Params.subtitle }}</span>
+                        <time>{{ .Date.Format "02 January 2006" }}</time>
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    {{ else }}
+        <p>{{ i18n "noProjects" }}</p>
+    {{ end }}
+{{ end }}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+    <head>
+        <title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+        <link rel="canonical" href="{{ .Site.BaseURL }}">
+        <link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+        <link rel='stylesheet' type='text/css' href='/css/style.css'>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="hsl(75, 57%, 29%)"/>
+        <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+        {{ if isset .Params "tags" }}
+            <meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+        {{ end -}}
+        <meta property="og:url" content="https://jasperalexander.github.io" />
+        <meta property="og:title" content="Jasper Alexander" />
+        <meta property="og:description" name="description" content="Full stack developer" />
+        <meta property="og:type" content="website" />
+        {{ template "_internal/twitter_cards.html" . }}
+        <meta name="msapplication-TileColor" content="hsl(75, 57%, 29%)" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta charset="utf-8">
+        <!-- <script src="/js/share.js"></script> -->
+    </head>
+    <body>
+        {{ partial "header.html" . }}
+        <!-- <svg id="texture"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="4" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect></svg> -->
+        <main>
+            <div>
+                {{ block "main" . }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
+        </main>
+        {{ partial "sidebar.html" . }}
+    </body>
+    <script src="/js/theme.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        };
+    </script>
+    <!-- <script src="/js/tooltip.js"></script> -->
+</html>

@@ -1,0 +1,18 @@
+[home]
+  other = 'Startpagina'
+[posts]
+  other = 'Berichten'
+[portfolio]
+  other = 'Portfolio'
+[email]
+  other = 'E-mail'
+[light]
+  other = 'Licht'
+[social]
+  other = 'Sociaal'
+[shareOnTwitter]
+  other = 'Deel op Twitter'
+[noPosts]
+  other = 'Geen berichten'
+[noProjects]
+  other = 'Geen projecten'

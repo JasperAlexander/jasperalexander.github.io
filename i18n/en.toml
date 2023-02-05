@@ -1,0 +1,18 @@
+[home]
+  other = 'Home'
+[posts]
+  other = 'Posts'
+[portfolio]
+  other = 'Portfolio'
+[email]
+  other = 'Email'
+[light]
+  other = 'Light'
+[social]
+  other = 'Social'
+[shareOnTwitter]
+  other = 'Share on Twitter'
+[noPosts]
+  other = 'No posts'
+[noProjects]
+  other = 'No projects'

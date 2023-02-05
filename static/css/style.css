@@ -1,0 +1,558 @@
+:root,
+:root .light-theme {
+    --background-color: hsl(0 100% 100% / 97%);
+    --color: 	hsl(204, 8%, 12%);
+    --selection:	hsl(75, 57%, 29%);
+    --underline: hsl(209, 12.2%, 93.2%);
+    --underline-hover: hsl(205, 10.7%, 78.0%);
+    --line: hsl(208, 11.3%, 88.9%);
+    --time: hsl(0, 0%, 52.3%);
+    --subtitle: hsl(206, 6.0%, 43.5%);
+}
+
+:root .dark-theme {
+    --background-color: 	hsl(204, 8%, 12%);
+    --color: hsl(210, 6.0%, 93.0%);
+    --selection:	hsl(75, 57%, 29%);
+    --underline: hsl(198, 6.6%, 15.8%);
+    --underline-hover: hsl(207, 5.6%, 31.6%);
+    --line: hsl(201, 6.2%, 20.5%);
+    --time: hsl(0, 0%, 49.4%);
+    --subtitle: hsl(206, 6.0%, 63.0%);
+}
+
+@keyframes fade {
+    from {
+        background-color: transparent;
+    }
+  
+    to {
+        background-color: rgba(0, 0, 0, 0.55);
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translate3d(-100%, 0px, 0px) translate3d(0px, 0px, 0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0px, 0px, 0px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, -apple-system, system-ui, sans-serif;
+}
+
+body,
+header {
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+::selection {
+    background-color: var(--selection);
+}
+
+.light-theme ::selection {
+    color: var(--background-color);
+}
+
+header {
+    top: 0;
+    width: 100%;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+@media screen and (min-width: 900px) {
+    .fullHeader {
+        display: block !important;
+    }
+    
+    .wrappedHeader {
+        display: none !important;
+    }
+}
+
+.fullHeader {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.fullHeader .fullHeaderContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fullHeader .fullHeaderContent > * {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fullHeader .fullHeaderContent > * > *, 
+.wrappedHeader > div > *,
+aside > button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.headeritem {
+    cursor: pointer;
+}
+
+.fullHeader .fullHeaderContent > * > *:hover, 
+.wrappedHeader > div > *:hover,
+aside > button:hover,
+aside > ul > li > a:hover,
+.nav a > span,
+.headeritem > span,
+.list .item:hover,
+.languagedropdowncontent {
+    transition: background-color 0.3s;
+    background-color: var(--selection);
+}
+
+.light-theme .fullHeader .fullHeaderContent > * > *:hover, 
+.light-theme .wrappedHeader > div > *:hover,
+.light-theme aside > button:hover,
+.light-theme aside > ul > li > a:hover,
+.light-theme .nav a > span,
+.light-theme .headeritem > span,
+.light-theme .list .item:hover,
+.light-theme .languagedropdowncontent {
+    color: var(--background-color);
+}
+
+.wrappedHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    left: 0;
+}
+
+.wrappedHeader > div {
+    display: flex;
+    align-items: center;
+}
+
+.wrappedHeader > div > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+}
+
+@media screen and (min-width: 520px) {
+    main {
+        padding-top: 65px !important;
+    }
+}
+
+main {
+    padding-top: 35px;
+    padding-bottom: 80px;
+}
+
+main > div {
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h2, p, span {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post a {
+    text-decoration: underline;
+}
+
+.post a {
+    text-decoration-color: var(--underline);
+}
+
+.post a:hover {
+    text-decoration-color: var(--underline-hover)
+}
+
+.post a:focus {
+    text-decoration-line: none;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 2px;
+    outline-color: var(--underline-hover);
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+    width: 15px;
+    height: 1px;
+    border: none;
+    display: flex;
+    background-color: var(--line);
+}
+
+img {
+    background-color: inherit;
+}
+
+p, .post ul {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+aside ul, 
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post ul {
+    padding-left: 20px;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.nav a > span,
+.headeritem > span {
+    visibility: hidden;
+    padding: 5px 10px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -35px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.nav a:hover > span,
+.headeritem:hover > span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.seperator {
+    width: 1px !important;
+    height: 15px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: var(--line);
+}
+
+.darkmodeToggleInput {
+    margin: 0px;
+    --size: 18px;
+  
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+  
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: 999px;
+    transition: all 500ms;
+    color: inherit;
+    pointer-events: none;
+}
+
+.darkmodeToggleInput:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+  
+    transform: scale(0.7);
+    box-shadow: inset 0 0 0 var(--size),
+      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+      var(--offset-orthogonal) 0 0 var(--ray-size),
+      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+      0 var(--offset-orthogonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
+        var(--ray-size),
+      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+@media screen and (min-width: 520px) {
+    aside {
+        width: 300px !important;
+    }
+}
+
+aside.open {
+    animation: 600ms cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal both running slide;
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
+}
+
+aside.closed {
+    transform: translate3d(-100%, 0px, 0px) translate3d(0px, 0px, 0px);
+}
+
+aside {
+    width: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 2;
+}
+
+.light-theme aside {
+    background-color: hsl(0 100% 100% / 100%);
+}
+
+aside > div {
+    display: flex;
+    align-items: center;
+    color: var(--subtitle);
+    margin-left: 10px;
+    align-self: flex-start;
+}
+
+aside > div:nth-child(2) {
+    margin-top: 35px;
+}
+
+aside ul a {
+    font-weight: 500;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.list .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    margin-left: -15px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.list .item .subtitle {
+    color: var(--subtitle);
+}
+
+.dark-theme .list .item:hover .subtitle,
+.dark-theme .list .item:hover time {
+    color: var(--color);
+}
+
+.light-theme .list .item:hover .subtitle,
+.light-theme .list .item:hover time {
+    color: var(--background-color)
+}
+
+.list .item time {
+    font-size: 13px;
+    color: var(--time);
+}
+
+.post h1 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.post h2 {
+    font-weight: 500;
+    font-size: 19px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    color: var(--subtitle);
+}
+
+.post time {
+    color: var(--time);
+    font-size: 13px;
+    margin-bottom: 35px;
+    display: inline-block;
+}
+
+.languagedropdowncontent {
+    visibility: hidden;
+    padding: 5px 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 55px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.languagedropdown:hover .languagedropdowncontent {
+    visibility: visible;
+    opacity: 1;
+}
+
+.languagedropdowncontent a:hover {
+    text-decoration: underline;
+}
+
+.space {
+    position: absolute;
+    top: 45px;
+    height: 10px;
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.overlay.open {
+    background-color: rgba(0, 0, 0, 0.55);
+    animation: 600ms cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal none running fade;
+    pointer-events: auto;
+}
+
+.tooltip {
+    position: absolute;
+}
+
+.tooltip > div {
+    position: relative;
+}
+
+.tooltip > div > div {
+    border-radius: 8px;
+    background-color: hsl(200, 7.0%, 20%);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--background-color);
+    position: absolute;
+    left: calc(50% - 22.5px);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#texture {
+    color-scheme: dark;
+    color: hsl(210, 6.0%, 93.0%);
+    display: inline-block;
+    vertical-align: middle;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    width: 100%;
+    height: calc(100vh + 200px);
+    opacity: .25;
+    pointer-events: none;
+    transform: translateY(0);
+    filter: contrast(30%) brightness(70%);
+}
+
+.light-theme .active {
+    color: var(--background-color);
+}
+
+.active {
+    background-color: var(--selection);
+}
+
+.active:hover {
+    background-color: var(--color) !important;
+    color: var(--background-color);
+}
+
+.fullHeader .fullHeaderContent > * > .active:hover, 
+aside > ul > li > .active:hover,
+.nav .active > span {
+    transition: background-color 0.3s;
+    background-color: var(--color);
+    color: var(--background-color);
+}
+
+.nav > a:focus,
+.languagedropdown:focus,
+.list .item:focus,
+.menuToggleButton:focus,
+aside ul a:focus {
+    outline: none !important;
+    border: 1px solid var(--selection);
+}

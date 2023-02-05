@@ -1,0 +1,14 @@
+baseURL = 'https://jasperalexander.github.io'
+title = 'Jasper Alexander'
+[params]
+  description = 'Full stack developer'
+defaultContentLang = 'en'
+[languages]
+    [languages.en]
+        contentDir = 'content/english'
+        languageName = 'English'
+        weight = 1
+    [languages.nl]
+        contentDir = 'content/dutch'
+        languageName = 'Nederlands'
+        weight = 2
