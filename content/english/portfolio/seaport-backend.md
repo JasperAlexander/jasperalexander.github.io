@@ -1,6 +1,6 @@
 ---
 title: "seaport-backend"
-subtitle: "Python, Django Rest Framework"
+subtitle: "Python, Django Rest Framework, Docker"
 description: "Desc"
 thumbnail: ""
 images: [""]

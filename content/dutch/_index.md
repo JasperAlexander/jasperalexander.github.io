@@ -7,8 +7,8 @@ description: 'Full stack developer'
 
 &nbsp;
 
-Ik ben een full stack developer wonend in Nederland, werkend met verschillende programmeertalen en frameworks, en heb ervaring met het bouwen van web-applicaties.
+Welkom op mijn website! Ik ben een full stack developer wonend in Nederland, werkend met verschillende programmeertalen en frameworks, en heb ervaring met het bouwen van webapplicaties.
 
-Mijn passie voor gedecentraliseerde systemen heeft mij geleid tot het onderzoeken van het potentieel van blockchaintechnologie en haar verschillende toepassingen. Ik ben geïnteresseerd in de manieren waarop decentralisatie kan worden gebruikt om transparantere en rechtvaardigere systemen te creëren.
+Naast mijn interesse in het ontwikkelen van webapplicaties, ben ik ook erg geïnteresseerd in kunstmatige intelligentie en het potentieel ervan om efficiëntie en innovatie in verschillende industrieën te stimuleren. Daarnaast verdiep ik me graag in gedecentraliseerde systemen en bestudeer ik de economie om beter te begrijpen hoe technologie economische groei kan bevorderen en de samenleving als geheel kan verbeteren.
 
-Naast mijn werk in de tech-branche, heb ik belangstelling voor economie en politiek. Ik ben geïnteresseerd in het begrijpen van de manieren waarop deze velden samenkomen met technologie, en hoe ze kunnen worden gebruikt om een meer rechtvaardige en eerlijke maatschappij te creëren.
+In deze snel veranderende wereld van technologie besteed ik veel tijd om op de hoogte te blijven van de nieuwste trends en ontwikkelingen. Mijn website dient als platform om mijn projecten, vaardigheden en ervaringen te presenteren, evenals mijn blog, waar ik mijn gedachten deel over het steeds veranderende technologielandschap. Ik nodig je uit om door de inhoud te bladeren en meer te weten te komen over mijn werk en interesses.

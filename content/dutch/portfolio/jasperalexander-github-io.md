@@ -1,6 +1,6 @@
 ---
 title: "jasperalexander.github.io"
-subtitle: "HTML, CSS, Hugo"
+subtitle: "HTML, CSS, JavaScript, Hugo"
 description: "Desc"
 thumbnail: ""
 images: [""]

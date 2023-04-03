@@ -1,6 +1,6 @@
 ---
 title: "seaport-frontend"
-subtitle: "HTML, CSS, TypeScript, Next.js, Hardhat, Wagmi, Vanilla-extraxt, Zustand, SWR"
+subtitle: "HTML, CSS, TypeScript, Next.js (v12), Hardhat, Wagmi, Vanilla-extraxt, Zustand, SWR"
 description: "Desc"
 thumbnail: ""
 images: [""]
